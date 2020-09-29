@@ -1,0 +1,31 @@
+<div class="page-container">
+  <div class="action-container">
+    <div class="header-page-container">
+      <h2>Change User data</h2>
+    </div>
+    <div class="editor-form">
+      <div class="row">
+        <div class="col-md-4">
+          <mat-form-field class="input-full-width">
+            <mat-label>Change password</mat-label>
+            <input matInput autocomplete="off">
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <div class="save-block">
+            <button matRipple [matRippleUnbounded]="false" (click)="clearCategoryCache()">
+              <mat-icon>save</mat-icon>
+              Clear Cache
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="save-block">
+      <button matRipple [matRippleUnbounded]="false" (click)="updateUserData()">
+        <mat-icon>save</mat-icon>
+        Save
+      </button>
+    </div>
+  </div>
+</div>

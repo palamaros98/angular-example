@@ -1,0 +1,77 @@
+<div class="page-container">
+    <div class="action-container">
+        <div class="header-page-container">
+            <h2>{{pageType.type}} News {{news.id}}</h2>
+            <a matRipple [matRippleUnbounded]="false" routerLink="/app/news" class="go-back">
+                <mat-icon>arrow_back_ios</mat-icon>
+                Back
+            </a>
+        </div>
+        <div class="editor-form">
+            <div class="row">
+                <div class="col-md-5">
+                    <mat-form-field class="input-full-width">
+                        <mat-label>News Slug</mat-label>
+                        <input matInput autocomplete="off" [(ngModel)]="news.slug">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-5">
+                    <mat-form-field class="input-full-width">
+                        <mat-label>Publiched</mat-label>
+                        <input matInput [matDatepicker]="picker" [(ngModel)]="news.published">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 checkbox-block">
+                    <section class="input-full-width">
+                        <mat-checkbox class="example-margin" [(ngModel)]="news.is_active">Show Item</mat-checkbox>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 uploader-block">
+                    <div class="uploader-content">
+                        <mat-file-upload
+                                [labelText]="'Select a file to upload:'"
+                                [selectButtonText]="'Choose File'"
+                                [uploadButtonText]="'Upload'"
+                                [allowMultipleFiles]="false"
+                                [showUploadButton]="true"
+                                [acceptedTypes]="'.png, .jpg, .jpeg'"
+                                (uploadClicked)="onUploadClicked()"
+                                (selectedFilesChanged)="onSelectedFilesChanged($event)"
+                        >
+                        </mat-file-upload>
+                    </div>
+                    <div class="uploader-preview">
+                        <img src="https://newkatrinasite.awery.com/uploads/news/{{news.image}}"
+                             onerror="this.src='assets/images/news-placeholder.jpg';"
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="content-translations">
+                <mat-tab-group [color]="'primary'" >
+                    <mat-tab *ngFor="let trans of translations" label="{{trans.lang}}">
+                        <div class="translation-field">
+                            <mat-form-field class="input-full-width">
+                                <mat-label>Name</mat-label>
+                                <input matInput autocomplete="off" [(ngModel)]="trans.trans_name">
+                            </mat-form-field>
+                        </div>
+                        <div class="content-editor">
+                            <angular-editor [(ngModel)]="trans.content" [config]="editorConfig"></angular-editor>
+                        </div>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+        </div>
+        <div class="save-block">
+            <button matRipple [matRippleUnbounded]="false" (click)="news.id != '' ? updateNews() : createNews();">
+                <mat-icon>save</mat-icon>
+                {{pageType.btn_form}}
+            </button>
+        </div>
+    </div>
+</div>

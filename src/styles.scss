@@ -1,0 +1,131 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~angular-notifier/styles.scss";
+@import "assets/css/bootstrap-grid.min.scss";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Thin'), local('Roboto-Thin'), url('/assets/fonts/robots/Robotothin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Thin Italic'), local('Roboto-ThinItalic'), url('/assets/fonts/robots/Robotothinitalic.woff2') format('woff2');
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Light'), local('Roboto-Light'), url('/assets/fonts/robots/Robotolight.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url('/assets/fonts/robots/Robotolightitalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), local('Roboto-Regular'), url('/assets/fonts/robots/Roboto.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Italic'), local('Roboto-Italic'), url('/assets/fonts/robots/Robotoitalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Medium'), local('Roboto-Medium'), url('/assets/fonts/robots/Robotomedium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url('/assets/fonts/robots/Robotomediumitalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Bold'), local('Roboto-Bold'), url('/assets/fonts/robots/Robotobold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'), url('/assets/fonts/robots/Robotobolditalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Black'), local('Roboto-Black'), url('/assets/fonts/robots/Robotoblack.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Black Italic'), local('Roboto-BlackItalic'), url('/assets/fonts/robots/Robotoblackitalic.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v47/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  vertical-align: middle;
+}
+
+.mat-drawer-inner-container{
+  background-color: #2b303b;
+}
+
+body{
+  margin: 0;
+  overflow: hidden;
+  font-family: Lato;
+}
+
+*{
+  outline: 0 !important;
+}
+
+.container{
+  max-width: 100% !important;
+}
+
+.mat-menu-panel{
+  min-width: 120px !important;
+}
+
+.container-content, .container-table, .container-table > .mat-elevation-z8, .container-page{
+  display: inline-block;
+  min-width: 100%;
+}

@@ -1,0 +1,35 @@
+<div class="background_un"></div>
+<div style="position: relative; display: flex; width: 100%; height: 100%; overflow: hidden;">
+    <div style="display: inline-block;  margin: auto; vertical-align: middle; border-radius: 2px; padding: 25px; width: 360px;">
+        <div>
+            <div style="padding: 10px 0; box-sizing: border-box; text-align: center">
+                <img src="assets/images/logo.jpg" style="width: 200px">
+            </div>
+            <div class="form-group form-group-default" [class.has-error]="loginUserName.invalid && (loginUserName.dirty || loginUserName.touched)">
+                <label>Email</label>
+                <input type="text" id="userName"  [(ngModel)]="form.email"  #loginUserName="ngModel" required  placeholder="Email" class="form-control">
+            </div>
+            <div *ngIf="loginUserName.invalid && (loginUserName.dirty || loginUserName.touched)" >
+                <label  *ngIf="loginUserName.errors.required" class="error" >This field is required.</label>
+            </div>
+            <div lass="form-group form-group-default" [class.has-error]="loginPassword.invalid && (loginPassword.dirty || loginPassword.touched)">
+                <label>Password</label>
+                <input type="password" class="form-control" placeholder="Password" id="password"  [(ngModel)]="form.password"  #loginPassword="ngModel" required>
+            </div>
+            <div *ngIf="loginPassword.invalid && (loginPassword.dirty || loginPassword.touched)" >
+                <label  *ngIf="loginPassword.errors.required" class="error" >This field is required.</label>
+            </div>
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-center justify-content-end">
+                    <a href="javascript:void(0)" class="text-info small"></a>
+                </div>
+            </div>
+            <button class="btn btn-info" style="width: 100%"  type="submit"  (click)="login()">Sign in</button>
+            <div style="padding: 20px 0; box-sizing: border-box; text-align: center">
+        <span>
+          AWERY © 2020
+        </span>
+            </div>
+        </div>
+    </div>
+</div>
